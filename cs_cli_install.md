@@ -148,7 +148,7 @@ You can use the commands that are provided with the Kubernetes CLI to manage clu
 
 Before you can run `kubectl` commands, [install the required CLIs](#cs_cli_install) and [create a cluster](cs_cluster.html#cs_cluster_cli).
 
-1.  Log in to the {{site.data.keyword.Bluemix_notm}} CLI. Enter your {{site.data.keyword.Bluemix_notm}} credentials when prompted. To specify a {{site.data.keyword.Bluemix_notm}} region, [include the API endpoint](cs_regions.html#bluemix_regions).
+1.  Log in to the {{site.data.keyword.Bluemix_notm}} CLI. Enter your {{site.data.keyword.Bluemix_notm}} credentials when prompted. To specify an {{site.data.keyword.Bluemix_notm}} region, [include the API endpoint](cs_regions.html#bluemix_regions).
 
       ```
       bx login
@@ -157,7 +157,7 @@ Before you can run `kubectl` commands, [install the required CLIs](#cs_cli_insta
 
       **Note:** If you have a federated ID, use `bx login --sso` to log in to the {{site.data.keyword.Bluemix_notm}} CLI. Enter your user name and use the provided URL in your CLI output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
 
-  2.  Select a {{site.data.keyword.Bluemix_notm}} account. If you are assigned to multiple {{site.data.keyword.Bluemix_notm}} organizations, select the organization where the cluster was created. Clusters are specific to an organization, but are independent from a {{site.data.keyword.Bluemix_notm}} space. Therefore, you are not required to select a space.
+  2.  Select an {{site.data.keyword.Bluemix_notm}} account. If you are assigned to multiple {{site.data.keyword.Bluemix_notm}} organizations, select the organization where the cluster was created. Clusters are specific to an organization, but are independent from an {{site.data.keyword.Bluemix_notm}} space. Therefore, you are not required to select a space.
 
   3.  If you want to create or access Kubernetes clusters in a region other than the {{site.data.keyword.Bluemix_notm}} region that you selected earlier, [specify the {{site.data.keyword.containershort_notm}} region API endpoint](cs_regions.html#container_login_endpoints).
 
@@ -245,7 +245,7 @@ To update the CLIs:
 
 1.  Update the {{site.data.keyword.Bluemix_notm}} CLI. Download the [latest version ![External link icon](../icons/launch-glyph.svg "External link icon")](https://clis.ng.bluemix.net/ui/home.html) and run the installer.
 
-2. Log in to the {{site.data.keyword.Bluemix_notm}} CLI. Enter your {{site.data.keyword.Bluemix_notm}} credentials when prompted. To specify a {{site.data.keyword.Bluemix_notm}} region, [include the API endpoint](cs_regions.html#bluemix_regions).
+2. Log in to the {{site.data.keyword.Bluemix_notm}} CLI. Enter your {{site.data.keyword.Bluemix_notm}} credentials when prompted. To specify an {{site.data.keyword.Bluemix_notm}} region, [include the API endpoint](cs_regions.html#bluemix_regions).
 
     ```
     bx login
@@ -414,10 +414,10 @@ The {{site.data.keyword.containershort_notm}} API requires header information th
 <tr>
 <td>Unfederated ID</td>
 <td><ul><li><strong>{{site.data.keyword.Bluemix_notm}} user name and password:</strong> You can follow the steps in this topic to fully automate the creation of your IAM access token.</li>
-<li><strong>Generate a {{site.data.keyword.Bluemix_notm}} API key:</strong> As an alternative to using the {{site.data.keyword.Bluemix_notm}} user name and password, you can <a href="../iam/apikeys.html#manapikey" target="_blank">use {{site.data.keyword.Bluemix_notm}} API keys</a> {{site.data.keyword.Bluemix_notm}} API keys are dependent on the {{site.data.keyword.Bluemix_notm}} account they are generated for. You cannot combine your {{site.data.keyword.Bluemix_notm}} API key with a different account ID in the same IAM token. To access clusters that were created with an account other than the one your {{site.data.keyword.Bluemix_notm}} API key is based on, you must log in to the account to generate a new API key. </li></ul></tr>
+<li><strong>Generate an {{site.data.keyword.Bluemix_notm}} API key:</strong> As an alternative to using the {{site.data.keyword.Bluemix_notm}} user name and password, you can <a href="../iam/apikeys.html#manapikey" target="_blank">use {{site.data.keyword.Bluemix_notm}} API keys</a> {{site.data.keyword.Bluemix_notm}} API keys are dependent on the {{site.data.keyword.Bluemix_notm}} account they are generated for. You cannot combine your {{site.data.keyword.Bluemix_notm}} API key with a different account ID in the same IAM token. To access clusters that were created with an account other than the one your {{site.data.keyword.Bluemix_notm}} API key is based on, you must log in to the account to generate a new API key. </li></ul></tr>
 <tr>
 <td>Federated ID</td>
-<td><ul><li><strong>Generate a {{site.data.keyword.Bluemix_notm}} API key:</strong> <a href="../iam/apikeys.html#manapikey" target="_blank">{{site.data.keyword.Bluemix_notm}} API keys</a> are dependent on the {{site.data.keyword.Bluemix_notm}} account they are generated for. You cannot combine your {{site.data.keyword.Bluemix_notm}} API key with a different account ID in the same IAM token. To access clusters that were created with an account other than the one your {{site.data.keyword.Bluemix_notm}} API key is based on, you must log in to the account to generate a new API key. </li><li><strong>Use a one-time passcode: </strong> If you authenticate with {{site.data.keyword.Bluemix_notm}} by using a one-time passcode, you cannot fully automate the creation of your IAM token because the retrieval of your one-time passcode requires a manual interaction with your web browser. To fully automate the creation of your IAM token, you must create a {{site.data.keyword.Bluemix_notm}} API key instead. </ul></td>
+<td><ul><li><strong>Generate an {{site.data.keyword.Bluemix_notm}} API key:</strong> <a href="../iam/apikeys.html#manapikey" target="_blank">{{site.data.keyword.Bluemix_notm}} API keys</a> are dependent on the {{site.data.keyword.Bluemix_notm}} account they are generated for. You cannot combine your {{site.data.keyword.Bluemix_notm}} API key with a different account ID in the same IAM token. To access clusters that were created with an account other than the one your {{site.data.keyword.Bluemix_notm}} API key is based on, you must log in to the account to generate a new API key. </li><li><strong>Use a one-time passcode: </strong> If you authenticate with {{site.data.keyword.Bluemix_notm}} by using a one-time passcode, you cannot fully automate the creation of your IAM token because the retrieval of your one-time passcode requires a manual interaction with your web browser. To fully automate the creation of your IAM token, you must create an {{site.data.keyword.Bluemix_notm}} API key instead. </ul></td>
 </tr>
 </tbody>
 </table>
@@ -539,7 +539,7 @@ The {{site.data.keyword.containershort_notm}} API requires header information th
 
 3.  Generate a new IAM token that includes your {{site.data.keyword.Bluemix_notm}} credentials and the account ID where the cluster was created. Replace _&lt;my_bluemix_account_id&gt;_ with the ID of the {{site.data.keyword.Bluemix_notm}} account that you retrieved in the previous step.
 
-    **Note:** If you are using a {{site.data.keyword.Bluemix_notm}} API key, you must use the {{site.data.keyword.Bluemix_notm}} account ID the API key was created for. To access clusters in other accounts, log into this account and create a {{site.data.keyword.Bluemix_notm}} API key that is based on this account.
+    **Note:** If you are using an {{site.data.keyword.Bluemix_notm}} API key, you must use the {{site.data.keyword.Bluemix_notm}} account ID the API key was created for. To access clusters in other accounts, log into this account and create an {{site.data.keyword.Bluemix_notm}} API key that is based on this account.
 
     ```
     POST https://iam.<region>.bluemix.net/oidc/token
